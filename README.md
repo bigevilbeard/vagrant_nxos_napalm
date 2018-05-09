@@ -12,5 +12,18 @@ Using Napalm on Vagrant and Nexus
 - vagrant init nxos/7.0.3.I7.3
 - vagrant up
 
-Enjoy.
+# Set Up Nexus switch
+- vagrant ssh
+
+Enable:
+```
+ Nexus9000v# conf t
+Enter configuration commands, one per line. End with CNTL/Z.
+Nexus9000v(config)# feature scp-server
+Nexus9000v(config)# feature nxapi
+Nexus9000v(config)# end
+Nexus9000v(config)# exit
+```
+
+Run python scripts - Enjoy.
 
